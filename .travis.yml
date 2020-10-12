@@ -6,4 +6,4 @@ before_install:
   - docker build -f Dockerfile.dev -t jaskirat1120/docker-react .
 
 script:
-  - docker run jaskirat1120/docker-react npm run test -- --coverage
+  - docker run jaskirat1120/docker-react -e CI=true npm run test -- --coverage
